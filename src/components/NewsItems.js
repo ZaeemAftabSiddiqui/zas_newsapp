@@ -2,7 +2,21 @@ import React, { Component } from "react";
 
 export class NewsItems extends Component {
   render() {
-    return <div>This is a news items 1</div>;
+    let { title, description, imageUrl } = this.props;
+    return (
+      <div className="my-3">
+        <div className="card" style={{ width: "18rem" }}>
+          <img src={imageUrl} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{title}</h5>
+            <p className="card-text">{description}</p>
+            <a href="/news" className="btn btn-sm btn-primary">
+              Read News
+            </a>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
