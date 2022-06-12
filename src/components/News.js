@@ -12,16 +12,19 @@ export class News extends Component {
   }
   async componentDidMount() {
     let url =
-      "https://newsapi.org/v2/everything?q=tesla&from=2022-05-10&sortBy=publishedAt&apiKey=8156b324bd974a02936a2357b2bfef10&page=1";
+      "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8156b324bd974a02936a2357b2bfef10&page=1&pagesize=20";
     let data = await fetch(url);
     let parsedData = await data.json();
-    this.setState({ articles: parsedData.articles });
+    this.setState({
+      articles: parsedData.articles,
+      totalResults: parsedData.totalResults,
+    });
   }
 
   handlePrevClick = async () => {
-    let url = `https://newsapi.org/v2/everything?q=tesla&from=2022-05-10&sortBy=publishedAt&apiKey=8156b324bd974a02936a2357b2bfef10&page=${
+    let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8156b324bd974a02936a2357b2bfef10&page=${
       this.state.page - 1
-    }`;
+    }&pagesize=20`;
     let data = await fetch(url);
     let parsedData = await data.json();
     this.setState({
@@ -32,20 +35,23 @@ export class News extends Component {
 
   handleNextClick = async () => {
     console.log("Next");
-    let url = `https://newsapi.org/v2/everything?q=tesla&from=2022-05-10&sortBy=publishedAt&apiKey=8156b324bd974a02936a2357b2bfef10&page=${
-      this.state.page + 1
-    }`;
-    let data = await fetch(url);
-    let parsedData = await data.json();
-    this.setState({
-      page: this.state.page + 1,
-      articles: parsedData.articles,
-    });
+    if (this.state.page + 1 > Math.ceil(this.state.totalResults / 20)) {
+    } else {
+      let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8156b324bd974a02936a2357b2bfef10&page=${
+        this.state.page + 1
+      }&pagesize=20`;
+      let data = await fetch(url);
+      let parsedData = await data.json();
+      this.setState({
+        page: this.state.page + 1,
+        articles: parsedData.articles,
+      });
+    }
   };
   render() {
     return (
       <div className="container my-3">
-        <h1>ZasGisNews - Top Headlines</h1>
+        <h1 className="text-center">ZasGisNews - Top Headlines</h1>
         <div className="row">
           {this.state.articles.map((element) => {
             return (
