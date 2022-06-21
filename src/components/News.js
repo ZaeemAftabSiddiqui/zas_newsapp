@@ -57,8 +57,13 @@ export class News extends Component {
   };
   fetchMoreData = async () => {
     this.setState({ page: this.state.page + 1 });
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8156b324bd974a02936a2357b2bfef10&page=${this.state.page}&pagesize=${this.props.page}`;
-    this.setState({ loading: true });
+    const url = `https://newsapi.org/v2/top-headlines?country=${
+      this.props.country
+    }&category=${
+      this.props.category
+    }&apiKey=8156b324bd974a02936a2357b2bfef10&page=${
+      this.state.page + 1
+    }&pagesize=${this.props.page}`;
     let data = await fetch(url);
     let parsedData = await data.json();
     this.setState({
@@ -82,9 +87,9 @@ export class News extends Component {
         >
           <div className="container">
             <div className="row">
-              {this.state.articles.map((element) => {
+              {this.state.articles.map((element, index) => {
                 return (
-                  <div className="col-md-4" key={element.url}>
+                  <div className="col-md-4" key={index}>
                     <NewsItems
                       title={element.title ? element.title.slice(0, 70) : ""}
                       description={
