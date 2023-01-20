@@ -1,70 +1,63 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ZAS News Website
+Welcome to the News Website GitHub repository!
 
-## Available Scripts
+This news website built with using ReactJS and NewsAPI.
+It is designed to be a simple and easy-to-use platform for accessing and displaying the latest news from various sources.
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+    Dynamic and responsive design optimized for desktop and mobile devices
+    Customizable news sources and categories
+    loading on scroll
+    Link to a news paper website
+    fetch all news from API of different website
+    loading bar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Clone the repository: git clone https://github.com/ZaeemAftabSiddiqui/zas_newsapp
+    Install dependencies: npm install
+    Start the development server: npm start
+    Access the site in your browser at http://localhost:3000
+    Create an account on NewsAPI and get the API key.
+    Create a .env file in the root directory and add the following line: REACT_APP_NEWS_API_KEY=YOUR_API_KEY.
 
-### `npm test`
+Configuration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+All site-wide settings can be configured in the src/config.js file. This includes options for the default news sources, categories, and more.
+Customization
 
-### `npm run build`
+The site's theme and layout can be customized by editing the files in the src/components and src/styles directories.
+Deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The site can be easily deployed to a hosting service like Vercel or Netlify by following the instructions provided by the service.
+Contributions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We welcome contributions to this project. If you have an idea for a new feature or have found a bug, please open an issue or submit a pull request.
+License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is licensed under the MIT License.
+# Acknowledgements
 
-### `npm run eject`
+This project was built using the following open-source tools and resources:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ReactJS
+    NewsAPI
+    Bootstrap
+    Font Awesome
+    React-Router
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Contact Us
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If you have any questions or concerns, please feel free to contact us at [email zaeemaftabsiddiqui@gmail.com]. Our customer service team is available 24/7 to assist you.
+Newsletters
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Sign up to our newsletters to stay updated with new products, sales, and promotions.
+Social Media
 
-## Learn More
+Follow us on our social media platforms to stay updated with new products and other informations.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   
+<a href="https://twitter.com/zaeemaftab" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="zaeemaftab" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/zaeem-aftab-siddiqui-ba45b21a2/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/zaeem-aftab-siddiqui-ba45b21a2/" height="30" width="40" /></a>
